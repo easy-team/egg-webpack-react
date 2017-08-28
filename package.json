@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "egg webpack development for react",
   "eggPlugin": {
     "name": "webpackreact",
@@ -13,7 +13,9 @@
     "eggPlugin",
     "egg-plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "co": "^4.6.0"
+  },
   "devDependencies": {
     "autod": "^2.8.0",
     "autod-egg": "^1.0.0",
