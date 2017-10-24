@@ -25,7 +25,7 @@ module.exports = app => {
         if (options && options.markup) {
           return app.react.renderToStaticMarkup(reactClass, locals);
         }
-        return app.react.renderToString(reactClass, locals);
+        return app.react.renderElement(reactClass, locals);
       });
     };
   }
