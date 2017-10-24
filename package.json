@@ -14,7 +14,8 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "webpack-manifest-normalize": "^0.1.0"
   },
   "devDependencies": {
     "autod": "^2.8.0",
