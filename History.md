@@ -1,4 +1,9 @@
 
+1.1.2 / 2017-10-30
+==================
+
+ * fix: local dev mode, render logic override failed
+
 1.1.1 / 2017-10-24
 ==================
 
