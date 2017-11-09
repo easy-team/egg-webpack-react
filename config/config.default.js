@@ -1,10 +1,7 @@
 'use strict';
-const path = require('path');
-module.exports = app => {
+module.exports = () => {
   const config = {};
-  config.webpackreact = {
-    manifest: path.join(app.baseDir, 'config/manifest.json'),
-  };
+  config.webpackreact = {};
   return config;
 };
 

@@ -1,7 +1,6 @@
 'use strict';
 const path = require('path');
 const co = require('co');
-const Manifest = require('webpack-manifest-normalize');
 const vm = require('vm');
 const NativeModule = require('module');
 module.exports = app => {
@@ -30,17 +29,4 @@ module.exports = app => {
       });
     };
   }
-
-  app.messenger.on(app.webpack.Constant.EVENT_WEBPACK_BUILD_STATE, data => {
-    if (data.state) {
-      const filepath = app.config.webpackreact.manifest;
-      const promise = app.webpack.fileSystem.readWebpackMemoryFile(filepath);
-      promise.then(content => {
-        if (content) {
-          Manifest.saveFile(filepath, content);
-          app.messenger.sendToApp('webpack_manifest_save_success', { state: true });
-        }
-      });
-    }
-  });
 };
