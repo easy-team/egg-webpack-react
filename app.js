@@ -6,8 +6,8 @@ const NativeModule = require('module');
 module.exports = app => {
 
   if (app.view) {
-    app.view.resolve = function* (name) {
-      return name;
+    app.view.resolve = function (name) {
+      return Promise.resolve(name);
     };
   }
 
