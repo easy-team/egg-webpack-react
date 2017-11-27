@@ -1,4 +1,9 @@
 
+2.0.1 / 2017-11-27
+==================
+
+  * fix:generator to promse for egg2(node8 await and aynsc)
+
 2.0.0 / 2017-11-09
 ==================
 
