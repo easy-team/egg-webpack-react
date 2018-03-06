@@ -21,7 +21,7 @@ module.exports = app => {
         }
         const wrapper = NativeModule.wrap(code);
         vm.runInThisContext(wrapper)(exports, require, module, __filename, __dirname);
-        const reactClass = module.exports;
+        const reactClass = module.exports && module.exports.default ? module.exports : exports.default ? exports : module.exports;
         if (options && options.markup) {
           return app.react.renderToStaticMarkup(reactClass, locals);
         }
