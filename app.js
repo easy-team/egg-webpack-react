@@ -20,7 +20,10 @@ module.exports = app => {
           throw new Error(`read webpack memory file[${filePath}] content is empty, please check if the file exists`);
         }
         const wrapper = NativeModule.wrap(code);
-        vm.runInThisContext(wrapper)(exports, require, module, __filename, __dirname);
+        //can‘t find async chunk file fix: https://github.com/easy-team/egg-react-webpack-boilerplate/issues/23
+        module.id = filePath;
+        module.filename = filePath;
+        vm.runInThisContext(wrapper)(exports, require, module, filePath, path.dirname(filePath));
         const reactClass = module.exports && module.exports.default ? module.exports : exports.default ? exports : module.exports;
         if (options && options.markup) {
           return app.react.renderToStaticMarkup(reactClass, locals);

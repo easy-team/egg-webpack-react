@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "egg webpack development for react",
   "eggPlugin": {
     "name": "webpackreact",
