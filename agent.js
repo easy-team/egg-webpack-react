@@ -8,7 +8,7 @@ module.exports = agent => {
         fs.unlinkSync(manifest);
       }
     } catch (e) {
-
+      agent.logger.info(e);
     }
   });
 };

@@ -6,7 +6,7 @@ const NativeModule = require('module');
 module.exports = app => {
 
   if (app.view) {
-    app.view.resolve = function (name) {
+    app.view.resolve = function(name) {
       return Promise.resolve(name);
     };
   }
@@ -20,7 +20,7 @@ module.exports = app => {
           throw new Error(`read webpack memory file[${filePath}] content is empty, please check if the file exists`);
         }
         const wrapper = NativeModule.wrap(code);
-        //can‘t find async chunk file fix: https://github.com/easy-team/egg-react-webpack-boilerplate/issues/23
+        // can‘t find async chunk file fix: https://github.com/easy-team/egg-react-webpack-boilerplate/issues/23
         module.id = filePath;
         module.filename = filePath;
         vm.runInThisContext(wrapper)(exports, require, module, filePath, path.dirname(filePath));
