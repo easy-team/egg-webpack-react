@@ -1,4 +1,9 @@
 
+2.0.3 / 2019-06-26
+==================
+
+  * fix: async chunk require not found, relation issue: https://github.com/easy-team/egg-react-webpack-boilerplate/issues/23
+
 2.0.1 / 2017-11-27
 ==================
 
