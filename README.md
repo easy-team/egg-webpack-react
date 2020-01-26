@@ -28,6 +28,11 @@ Support React Server Side Render File Memory Read for [egg-webpack](https://gith
 $ npm i egg-webpack-react --save-dev
 ```
 
+## Version
+
+- 3.x.x > Node 8
+- 2.x.x > Node 6
+
 ## Usage
 
 ```js

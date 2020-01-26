@@ -1,6 +1,6 @@
 {
   "name": "egg-webpack-react",
-  "version": "3.0.0-beta.1",
+  "version": "3.0.0",
   "description": "egg webpack development for react",
   "eggPlugin": {
     "name": "webpackreact",
@@ -37,7 +37,8 @@
     "fix": "eslint . --fix",
     "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
     "pkgfiles": "egg-bin pkgfiles",
-    "autod": "autod"
+    "autod": "autod",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "files": [
     "config",
